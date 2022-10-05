@@ -357,7 +357,7 @@ Preparing: select cid,cname from t_clazz where cid=?
 
 在mybatis中如何开启全局的延迟加载呢？需要setting配置，如下：
 
-![image-20221002112230086](E:\Mybatis动态SQL\assets\image-20221002112230086.png)
+![image-20221002112230086](.\assets\image-20221002112230086.png)
 
 ```xml
 <settings>
@@ -920,7 +920,7 @@ MyBatis3：生成的是增强版，除了基本的增删改查之外还有复杂
 
 我们发现，使用增强版生成的实体类多了一个XXExmaple，我这里是CarMapper
 
-![image-20221002175719063](E:\Mybatis动态SQL\assets\image-20221002175719063.png)
+![image-20221002175719063](.\assets\image-20221002175719063.png)
 
 发现很多的方法都可以传递 带有 Example 的参数
 
@@ -932,7 +932,7 @@ MyBatis3：生成的是增强版，除了基本的增删改查之外还有复杂
 
 如果想封装 `and`的信息，就要使用对象的 `createCriteria`方法
 
-![image-20221002180002840](E:\Mybatis动态SQL\assets\image-20221002180002840.png)
+![image-20221002180002840](.\assets\image-20221002180002840.png)
 
 想要封装 or 的信息，就要使用对象的 `or` 方法
 
@@ -1168,7 +1168,7 @@ Parameters: 26.8(Double), 新能源(String)
 
 - 可以where后面添加一个恒成立的条件，在第一个条件加上And
 
-![image-20221001091410971](E:\Mybatis动态SQL\assets\image-20221001091410971.png)
+![image-20221001091410971](.\assets\image-20221001091410971.png)
 
 - 解决方式二：使用where标签嵌套在外面，可以智能的处理and是否存在
 
@@ -1769,7 +1769,7 @@ List<Car> selectAll();
 - 在查询语句之后封装PageInfo对象（PageInfo对象将来会存储到request域当中。在页面上展示。）
 - PageInfo对象有很多方法，如下所示
 
-![image-20221002211022729](E:\Mybatis动态SQL\assets\image-20221002211022729.png)
+![image-20221002211022729](.\assets\image-20221002211022729.png)
 
 演示：
 
@@ -1789,7 +1789,7 @@ public void test02(){
 
 启动的时候出现：
 
-![image-20221002211134274](E:\Mybatis动态SQL\assets\image-20221002211134274.png)
+![image-20221002211134274](.\assets\image-20221002211134274.png)
 
 表明是使用了拦截器，对之前查到的结果执行了拦截，动态添加了 `limit`
 
